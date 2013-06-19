@@ -85,12 +85,10 @@ logging = 'debug'
 # The error handling page is also passed the error code and ticket as
 # variables.  Traceback information will be stored in the ticket.
 #
-# routes_onerror = [
-#     (r'init/400', r'/init/default/login')
-#    ,(r'init/*', r'/init/static/fail.html')
-#    ,(r'*/404', r'/init/static/cantfind.html')
-#    ,(r'*/*', r'/init/error/index')
-# ]
+routes_onerror = [
+    (r'welcome/404', r'/welcome/views/404.html'),
+    (r'welcome/*', r'/welcome/views/error.html')
+]
 
 # specify action in charge of error handling
 #
