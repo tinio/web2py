@@ -259,6 +259,8 @@ def try_rewrite_on_error(http_response, request, environ, ticket=None):
                         environ['QUERY_STRING'] = query_string
                         environ['WEB2PY_STATUS_CODE'] = status
                         return None, environ
+                    else:
+                        break
     # do nothing!
     return http_response, environ
 
